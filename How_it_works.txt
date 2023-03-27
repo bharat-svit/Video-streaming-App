@@ -1,0 +1,18 @@
+*** see image video streaming ***
+
+
+- when /video is requrestd from <video></video> tag request is made to server for video. 
+- it will send  0-bytes Range as its starting of video
+
+- once it reaches server it will send data in chunks through buffer & video plays untill bufer is 
+    not empty.
+
+- then it will keep on sending request to server for next chunk of data untill entire video is buffered into player.
+
+
+- fs will help create file stream that go backs to client 
+- range headers from client will required so that we can determine what range of video needs to be send
+
+
+
+
